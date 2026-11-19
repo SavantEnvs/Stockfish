@@ -1,0 +1,9 @@
+project: savantenvs/Stockfish
+target: syzygy
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/syzygy/testsuite
+cmds:
+  - cmd: /mayhem/syzygy_afl @@
+    afl: true
+    timeout: 20

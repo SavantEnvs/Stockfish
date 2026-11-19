@@ -1,0 +1,8 @@
+setoption name UCI_LimitStrength value true
+setoption name UCI_Elo value 1500
+setoption name NumaPolicy value system
+ucinewgame
+position fen 8/8/8/8/8/4k3/8/4K2Q w - - 0 1
+go movetime 50
+ponderhit
+stop

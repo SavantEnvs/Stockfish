@@ -1,0 +1,9 @@
+project: savantenvs/Stockfish
+target: uci
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/uci/testsuite
+cmds:
+  - cmd: /mayhem/uci_afl @@
+    afl: true
+    timeout: 20

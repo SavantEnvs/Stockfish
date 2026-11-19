@@ -1,0 +1,9 @@
+project: savantenvs/Stockfish
+target: nnue
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/nnue/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_nnue
+    libfuzzer: true
+    timeout: 20
